@@ -3,7 +3,7 @@ import { useBebidas } from "../hooks";
 
 export const Bebida = ({bebida}) => {
 
-  const { handleModalClick } = useBebidas();
+  const { handleModalClick , handleBebidaIdClick } = useBebidas();
 
   return (
     <Col md={6} lg={3}>
@@ -20,7 +20,8 @@ export const Bebida = ({bebida}) => {
                     className="w-100 text-uppercase mt-2"
                     onClick={ () => {
                         handleModalClick()
-                    } }
+                        handleBebidaIdClick(bebida.idDrink)
+                    }}
                 >
                     Ver Receta
                 </Button>
