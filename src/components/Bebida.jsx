@@ -7,6 +7,7 @@ export const Bebida = ({bebida}) => {
   const handleAddFavorites = () => {
     console.log('Añadiendo a favoritos');
     console.log(bebida);
+    localStorage.setItem("bebida",JSON.stringify(bebida));
   }
 
   return (
