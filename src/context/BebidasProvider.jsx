@@ -22,7 +22,8 @@ export const BebidasProvider = ({children}) => {
     return (
         <BebidasContext.Provider
             value={{
-                consultarBebida
+                consultarBebida,
+                bebidas
             }}
         >
             {children}
