@@ -3,9 +3,7 @@ import { useBebidas } from '../hooks';
 
 export const ModalBebida = () => {
 
-  const { modal , handleModalClick , receta , cargando } = useBebidas();
-
-  console.log(receta);
+  const { modal , handleModalClick , receta , cargando } = useBebidas();  
 
   const mostrarIngredientes = () => {
     let ingredientes = [];

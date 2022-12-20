@@ -4,6 +4,10 @@ import { useBebidas } from "../hooks";
 export const Bebida = ({bebida}) => {
 
   const { handleModalClick , handleBebidaIdClick } = useBebidas();
+  const handleAddFavorites = () => {
+    console.log('Añadiendo a favoritos');
+    console.log(bebida);
+  }
 
   return (
     <Col md={6} lg={3}>
@@ -25,6 +29,14 @@ export const Bebida = ({bebida}) => {
                 >
                     Ver Receta
                 </Button>
+                <Button
+                    variant={'success'}
+                    className="w-100 text-uppercase mt-2"
+                    onClick={ () => handleAddFavorites() }
+                >
+                    Añadir a Favoritos
+                </Button>
+                
             </Card.Body>
         </Card>
     </Col>
